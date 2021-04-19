@@ -4,6 +4,7 @@ architecture decision records (ADRs), diagrams, explanation of processes, any ot
 
 ## table of contents
 
+- [bootstrap owners set up](./BOOTSTRAP.md)
 - architecture-decision-records
 - scenarios
 
