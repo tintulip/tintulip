@@ -36,5 +36,5 @@ fileignoreconfig:
   checksum: dfed8cb2abefeaea6d2c497b1b90ce831e70b72cb649353793842ab9ec3b467d
   ignore_detectors: []
 - filename: scoutsuite/scout-report/scoutsuite-results/scoutsuite_results_aws-tintulip-owners.js
-  checksum: b73be76da3eb1cef119ca97c0c85a2e94edd4947cf7f993198b92a005d1ec777
+  checksum: a9a4a103102f656017bad8e13a1a6964ed5517c0f1e4291829ed6de5ecb90869
   ignore_detectors: []
