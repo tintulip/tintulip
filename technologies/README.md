@@ -11,7 +11,11 @@ As per [documentation (section "Sign in with the root user")](https://docs.aws.a
 Knowing this, when planning a Control Tower setup it would be important to know who will be in possession of these accounts and plan security controls accordingly.
 
 ## Setting up landing zone
-In order for a landing zone to be configured, control tower runs pre-launch checks on your account. To set up a landing zone, we followed the [getting started](https://docs.aws.amazon.com/controltower/latest/userguide/getting-started-with-control-tower.html) instructions. Control tower created two organisational units(ou), `security` and `sandbox` and within `security ou` created two accounts:`log archive` and `audit account`. To create the accounts, control tower required two distinct, unique email addresses that were not associted with an AWS account. 
+In order for a landing zone to be configured, control tower runs pre-launch checks on your account. To set up a landing zone, we followed the [getting started](https://docs.aws.amazon.com/controltower/latest/userguide/getting-started-with-control-tower.html) instructions. Control tower created two organisational units(ou), `security` and `sandbox` and within `security ou` created two accounts:`log archive` and `audit account`. To create the accounts, control tower required two distinct, unique email addresses that were not associted with an AWS account. Required to pick a region in the Region selection during set up.
+
+## Region
+
+Currently Control Tower governs London and only London is controlled.
 
 
 ## Guardrails
