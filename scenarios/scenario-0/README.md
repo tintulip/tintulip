@@ -15,7 +15,7 @@ They want to publish some guidance on licensing while they get the organisation 
 
 In this scenario, Team Dalí (Platform) will provide some infrastructure and pipeline access for Team Mozart (Web) to publish CLA's website.
 
-![scenario 0 architecture diagram](https://github.com/tintulip/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0.png "scenario 0 architecture diagram")
+![scenario 0 architecture diagram](https://github.com/tintulip/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-target.png "scenario 0 architecture diagram")
 
 ## Threat model
 
