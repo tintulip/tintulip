@@ -1,5 +1,7 @@
 # Bootstrap owners
 
+***Current Status:This bootstrap process is no longer in use, read [SSO.md](./SSO.md)  for current bootstrap process*** 
+
 Below are the steps we took from the initial aws account creation, to creating individual IAM admin users. 
 
 

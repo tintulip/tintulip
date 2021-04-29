@@ -4,11 +4,12 @@ architecture decision records (ADRs), diagrams, explanation of processes, any ot
 
 ## table of contents
 
-- [bootstrap owners set up](./BOOTSTRAP.md)
+- [SSO users set up](./technologies/SSO.md)
 - [architecture decision records](./architecture-decision-records/)
 - [scenarios and threat models](./scenarios/)
 - [learning and considerations on technologies](./technologies/)
 - [scoutsuite reports](./scoutsuite/)
+- [*deprecated bootstrap owners set up*](./technologies/BOOTSTRAP.md)
 
 ## how to use this repo
 
