@@ -15,13 +15,13 @@ They want to publish some guidance on licensing while they get the organisation 
 
 In this scenario, Team Dalí (Platform) will provide some infrastructure and pipeline access for Team Mozart (Web) to publish CLA's website.
 
-![scenario 0 architecture diagram](https://github.com/tintulip/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-target.png "scenario 0 architecture diagram")
+![scenario 0 architecture diagram](https://github.com/documentation/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-target.png "scenario 0 architecture diagram")
 
 ## Threat model on first proposal, 20/04/2021
 
 Workshop run on 20/04/2021 on [this mural board (prior access required)](https://app.mural.co/t/thoughtworksclientprojects1205/m/thoughtworksclientprojects1205/1618910618512/25bc1a6f0ed2f1cc6df5272f154ea1a2fce9036a)
 
-![scenario 0 threat modelling](https://github.com/tintulip/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-threat-modelling.png "threat model of scenario 0")
+![scenario 0 threat modelling](https://github.com/documentation/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-threat-modelling.png "threat model of scenario 0")
 
 ### Assumptions & areas not covered
 
@@ -58,7 +58,7 @@ with voting score in (brackets)
 
 Workshop run on 27/04/2021 on [this mural board (prior access required)](https://app.mural.co/t/thoughtworksclientprojects1205/m/thoughtworksclientprojects1205/1619449981497/2414a7100aa903bf465ccaf9409cf1c77f81dcc0)
 
-![updated scenario 0 threat modelling](https://github.com/tintulip/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-updated-threat-modelling.png "threat model of updated scenario 0")
+![updated scenario 0 threat modelling](https://github.com/documentation/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-updated-threat-modelling.png "threat model of updated scenario 0")
 
 This time we bring two alternatives for study:
 - any privileged operation happens via protected device and in inherently manual (top diagram)
