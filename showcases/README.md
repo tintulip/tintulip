@@ -2,7 +2,7 @@
 
 First showcase!
 
-Blue Team started configuring the AWS account on previous Friday and in the 3 days sincethe team focused on drafting an architecture and backlog for "Scenario 0" as well as configuring GitHub accounts and Threat Modelling.
+Blue Team started configuring the AWS account on previous Friday and in the 3 days since the team focused on drafting an architecture and backlog for "Scenario 0" as well as configuring GitHub accounts and Threat Modelling.
 
 ## Accounts set up
 
@@ -88,3 +88,20 @@ We are up for revisiting this and dedicate some efforts in this area as we chang
 ### What is the boundary between AWS-native automation and Infrastructure as Code
 
 A significant chunk of risk identified in threat modelling comes from the high-privilege pipeline that we initially accounted for. In reality we expect that running Control Tower will give us a set up in which we'll rely less on Terraform and highly privileged tooling executing outside the AWS environment and rely on AWS-native tooling instead, integrating Infrastructure as Code only within security boundaries and not around them.
+
+# Showcase 1 - 28/04/2021
+
+You can find the deck presented [here](https://github.com/tintulip/documentation/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20April%2028.pdf).
+
+In this showcase we present initial progress on:
+- GitHub Organisation Security Controls ([read more](https://github.com/tintulip/documentation/blob/main/GitHub.md#github-organization))
+- AWS Control Tower ([read more](https://github.com/tintulip/documentation/tree/main/technologies#aws-control-tower))
+- Introducing the first Infrastructure as Code pipeline ([read more](https://github.com/tintulip/documentation/blob/main/technologies/PIPELINE.md#using-github-actions-to-set-up-cicd))
+
+## Threat Modelling
+
+We present an [updated Threat Model for scenario 0](https://github.com/tintulip/documentation/blob/main/scenarios/scenario-0/README.md#threat-model-on-updated-proposal-with-privileged-access-alternatives-27042021).
+
+## Prioritisation
+
+Main point of the discussion is that we want to focus on how to improve attack resistance of the longer temporal attack surface rather on low-frequency or one-off operations.
