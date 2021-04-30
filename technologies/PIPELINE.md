@@ -21,5 +21,11 @@ The selected actions match certain specified criteria which are defined in the s
 ## tfsec
 In order to use tfsec the pipeline definition had to be modified. This was done by including the tfsec action with the specified version.Both errors and warnings break the pipeline and exceptions can be made within the code. As the action is currently not verified we had to set the organisations settings to allow all actions. Overall, using tfsec produced meaningful reports therefore is good to include within the pipeline.
 
+## checkov
+Checkov is a similar tool to tfsec. It requires the path of the directory containing the terraform files. It checks against multiple policies and some are similar to tfsec. Also allows to customise policies to be enforced. Checkov also allows the exclusion of policies by suppressing a check. This is done by putting a comment within the specific line of code that the issue was raised. The comment contains a `check id`, this is the specifc check that the code is violating and a `suppression comment`. Checkov applies different checks than tfsec and therefore, it is useful using tfsec alongside checkov.
+
+## Manual Approval
+In order to enable required approvers to review deployments, GitHub requires the repository to either be public or to have a GitHub enterprise license. This would have allowed a set of people to review pending jobs and either approve or reject a deployment.
+
 ## Future Considerations
 Access and Secrets keys are static and need to be rotated every 90 days.
