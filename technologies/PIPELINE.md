@@ -18,6 +18,8 @@ When a commit is pushed to the main branch the pipeline will run a series of ste
 
 The selected actions match certain specified criteria which are defined in the settings, which are actions created by GitHub and actions in the marketplace created by verified creators.The action permissions are set under the actions section in the specified repository settings.    
 
+## tfsec
+In order to use tfsec the pipeline definition had to be modified. This was done by including the tfsec action with the specified version.Both errors and warnings break the pipeline and exceptions can be made within the code. As the action is currently not verified we had to set the organisations settings to allow all actions. Overall, using tfsec produced meaningful reports therefore is good to include within the pipeline.
 
 ## Future Considerations
 Access and Secrets keys are static and need to be rotated every 90 days.
