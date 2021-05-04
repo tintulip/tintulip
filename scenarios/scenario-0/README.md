@@ -104,3 +104,61 @@ We discussed what area of focus we want from the scenario rather than threats, c
   - The potential creation of a secure VDI/Console environment to allow automation to be executed from a protected device is not resusable enough to be worth pursuing.
 - How to make the bootstrap both automated and resistant to tampering (e.g. supply chain attacks) so that it can form a trust anchor is the second most interesting finding we can pursue.
 - How to make day to day infrastructure changes secure, assuming a bootstrap has been done securely is the most inresting finding we can pursue.
+
+## Threat model on pipeline design with privileged workloads in AWS, 04/05/2021
+
+Workshop run on 04/05/2021 on [this mural board (prior access required)](https://app.mural.co/t/thoughtworksclientprojects1205/m/thoughtworksclientprojects1205/1620122393386/8160d3bb4a45c969fdae1bd5dcd23ff6a289a530)
+
+![threat model of team Dalí's pipeline with privileged workloads on the AWS side](https://github.com/documentation/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-team-dali-pipeline-threat-modelling.png "threat model of team Dalí's pipeline with privileged workloads on the AWS side")
+
+This time we focus on the pipelines and suggest a change of design mainly motivated by the threat of a compromised internal user.
+From some reseach (see [this issue](https://github.com/actions/runner/issues/458)) it's evident that any GH Actions workflow can be tampered with by any legitimate committer to the repository. In our threat model a legitimate committer can be compromised so GH Actions by itself is not tamper resistant.
+The design we suggest takes inspiration from [this article from Gruntwork.io](https://gruntwork.io/guides/automations/how-to-configure-a-production-grade-ci-cd-setup-for-apps-and-infrastructure-code/), extending their threat model to match ours. Some highlights:
+
+- GitHub Actions is now considered a lower security side than AWS and does not have permission to perform write operations into AWS.
+- We introduce a loosely defined "Applier workload" that resides on the AWS side and enforces trustable policy controls and applied privileged write operations
+- We maintain, for the sake of learning exercise, that the GH Actions pipeline maintains read access to AWS to enable better development experience to team Dalí
+
+### Assumptions & areas not covered
+
+- We intentionally removed from the diagram anything related on how to initialise this structure, so that the focus is on the ongoing operation of this system rather than its initialisation
+- The ReadOnly role given to the pipeline needs more permissions that the AWS-managed ReadOnly policy - it also needs to read bucket contents to perform a `terraform plan`!
+- About the "Applier workload":
+  - is isolated in its own VPC with egress to GH and AWS APIs only.
+  - its logic is not influenced by the GH repo it applies
+  - exposes some form of endpoint to process a git commit - this is restricted to a specific, preconfigured repository.
+  - runs on ephemeral compute (e.g. ECS Fargate or lambdas or CodePipeline - not EC2)
+  - can apply policy-based decisions on the outcome of a `terraform plan` or other tools (preconfigured)
+  - has a way to ask operators for approval - be that with email and a confirmation email or slack integrations.
+
+### Threats identified and mitigations discussed
+
+with voting score in (brackets)
+
+- can turn versioning off and delete the bucket (3)
+- Requesting a build can be spoofed / is there authentication to the worklload (3)
+- can use exposed readonly keys to expose secrets from the TFstate (2)
+- can use tf output to leak taskRole credentials (2)
+- can find vulnerabilities in the AWS setup just by looking at the terraform (1)
+- request deploy of previous TF configuration (1)
+- request can trigger a vulnerability in the workload request endpoint if there is not enough validation (1)
+- privilege escalation via terraform plan (1)
+- approving own changes (1)
+- can find vulnerabilities in the AWS setup by looking around the environment
+- access logging on TF statebucket
+- Triggering a lot of requests can overwhelm workload from picking up real  requests
+- can use to expose secrets from the TFstate
+- Triggering a lot of approvals can spam people and have approvals go in email blocklist
+
+#### mitigations for the pipeline tampering with statebuckets
+
+Mainly, introducing account isolation between the "Applier workload" and Production resources created is the best solution long-term as it scales well with the evolution of complexity of operations that the pipeline will perform.
+
+- account boundary to separate "build" buckets from "built" buckets (and other infra resources)
+- explicit deny on deletions and versioning disable
+- multiple levels of deny - SCP, bucket policy
+- attempts to delete buckets can be part of the rejection logic of pipeline
+
+#### mitigations for spoofing requests to applier workload request endpoint
+
+Introduce some form of authentication. We did not call extra assumptions on this so it's hard to make any further observation.
