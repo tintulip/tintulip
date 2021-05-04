@@ -15,13 +15,13 @@ They want to publish some guidance on licensing while they get the organisation 
 
 In this scenario, Team Dalí (Platform) will provide some infrastructure and pipeline access for Team Mozart (Web) to publish CLA's website.
 
-![scenario 0 architecture diagram](https://github.com/documentation/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-target.png "scenario 0 architecture diagram")
+![scenario 0 architecture diagram](https://github.com/tintulip/tintulip/raw/main/scenarios/scenario-0/CLA-scenario-0-target.png "scenario 0 architecture diagram")
 
 ## Threat model on first proposal, 20/04/2021
 
 Workshop run on 20/04/2021 on [this mural board (prior access required)](https://app.mural.co/t/thoughtworksclientprojects1205/m/thoughtworksclientprojects1205/1618910618512/25bc1a6f0ed2f1cc6df5272f154ea1a2fce9036a)
 
-![scenario 0 threat modelling](https://github.com/documentation/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-threat-modelling.png "threat model of scenario 0")
+![scenario 0 threat modelling](https://github.com/tintulip/tintulip/raw/main/scenarios/scenario-0/CLA-scenario-0-threat-modelling.png "threat model of scenario 0")
 
 ### Assumptions & areas not covered
 
@@ -58,7 +58,7 @@ with voting score in (brackets)
 
 Workshop run on 27/04/2021 on [this mural board (prior access required)](https://app.mural.co/t/thoughtworksclientprojects1205/m/thoughtworksclientprojects1205/1619449981497/2414a7100aa903bf465ccaf9409cf1c77f81dcc0)
 
-![updated scenario 0 threat modelling](https://github.com/documentation/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-updated-threat-modelling.png "threat model of updated scenario 0")
+![updated scenario 0 threat modelling](https://github.com/tintulip/tintulip/raw/main/scenarios/scenario-0/CLA-scenario-0-updated-threat-modelling.png "threat model of updated scenario 0")
 
 This time we bring two alternatives for study:
 - any privileged operation happens via protected device and in inherently manual (top diagram)
@@ -109,7 +109,7 @@ We discussed what area of focus we want from the scenario rather than threats, c
 
 Workshop run on 04/05/2021 on [this mural board (prior access required)](https://app.mural.co/t/thoughtworksclientprojects1205/m/thoughtworksclientprojects1205/1620122393386/8160d3bb4a45c969fdae1bd5dcd23ff6a289a530)
 
-![threat model of team Dalí's pipeline with privileged workloads on the AWS side](https://github.com/documentation/documentation/raw/main/scenarios/scenario-0/CLA-scenario-0-team-dali-pipeline-threat-modelling.png "threat model of team Dalí's pipeline with privileged workloads on the AWS side")
+![threat model of team Dalí's pipeline with privileged workloads on the AWS side](https://github.com/tintulip/tintulip/raw/main/scenarios/scenario-0/CLA-scenario-0-team-dali-pipeline-threat-modelling.png "threat model of team Dalí's pipeline with privileged workloads on the AWS side")
 
 This time we focus on the pipelines and suggest a change of design mainly motivated by the threat of a compromised internal user.
 From some reseach (see [this issue](https://github.com/actions/runner/issues/458)) it's evident that any GH Actions workflow can be tampered with by any legitimate committer to the repository. In our threat model a legitimate committer can be compromised so GH Actions by itself is not tamper resistant.
