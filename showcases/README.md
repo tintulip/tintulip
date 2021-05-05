@@ -105,3 +105,15 @@ We present an [updated Threat Model for scenario 0](https://github.com/documenta
 ## Prioritisation
 
 Main point of the discussion is that we want to focus on how to improve attack resistance of the longer temporal attack surface rather on low-frequency or one-off operations.
+
+# Showcase 2 - 05/05/2021
+
+Showcase canceled due to shorter week and work being in flight rather than completed.
+A replacement deck with updates is available [here](https://github.com/documentation/documentation/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20May%205.pdf).
+
+We update progress on:
+- Replacing "owner" IAM users with SSO ([read more](https://github.com/documentation/documentation/tree/main/technologies/SSO.md))
+
+## Threat Modelling
+
+We present a [different approach to pipelines running privileged AWS operations](https://github.com/tintulip/tintulip/tree/main/scenarios/scenario-0#threat-model-on-pipeline-design-with-privileged-workloads-in-aws-04052021).
