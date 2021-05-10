@@ -17,7 +17,6 @@ In order for a landing zone to be configured, control tower runs pre-launch chec
 
 Currently Control Tower governs London and only London is controlled.
 
-
 ## Guardrails
 
 Control tower implements preventative or detective controls through guardrails and is applied throughtout the entire organisational unit. When control tower is set up guardrails is automatically enabled and certain controls are mandatory or elective.
@@ -29,3 +28,9 @@ When control tower is initally enabled, it does not activate guard duty.
 Below is a diagram that represents the organisation units(ou) Control tower has set up as well as an additional ou we have made, workloads OU. It also includes what each `ou` can do which is represented by the pink stickies and the following accounts.
 
 ![Current Organisation units structure](./ORG_Structure.png "Current Organisation units structure")
+
+## Out of the box SSO permissions
+
+The setup comes with a group named `AWSSecurityAuditors`. This is a rather confusing naming as the permissions associated with it are `AWSReadOnlyAccess` that are more limited than what the AWS-managed `SecurityAudit` policy grants.
+- :warning: In particular, these permissions are not enough to run a ScoutSuite report on an account.
+- :warning: Similarly, users in this group have no ability to see security audit dashboards like Config or GuardDuty.
