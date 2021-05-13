@@ -9,7 +9,7 @@ architecture decision records (ADRs), diagrams, explanation of processes, any ot
 - [scenarios and threat models](./scenarios/)
 - [learning and considerations on technologies](./technologies/)
 - [scoutsuite reports](./scoutsuite/)
-- [*deprecated bootstrap owners set up*](./technologies/BOOTSTRAP.md)
+- [*deprecated bootstrap owners set up*](./technologies/bootstrap-owners.md)
 
 ## how to use this repo
 
