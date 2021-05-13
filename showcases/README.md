@@ -117,3 +117,58 @@ We update progress on:
 ## Threat Modelling
 
 We present a [different approach to pipelines running privileged AWS operations](https://github.com/tintulip/tintulip/tree/main/scenarios/scenario-0#threat-model-on-pipeline-design-with-privileged-workloads-in-aws-04052021).
+
+# Showcase 3 - 12/05/2021
+
+You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20May%2012.pdf).
+
+Since last showcase we present completion of scenario 0. CLA's website is now available [at this link](https://d2euivgmcq1yyp.cloudfront.net/).
+
+Individual items we worked on:
+- Pipeline for website infrastructure ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/PIPELINE.md))
+- Pipeline for website content delivery ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/RESTRICTED_PIPELINE.md))
+- Security tooling for IaC pipelines ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/PIPELINE.md))
+- Publishing CLA's website ([read more](https://github.com/tintulip/website-infra#cloudfront-considerations))
+
+Everything developed so far is either covered with Terraform code or documented as a manual step.
+
+## Threat Modelling
+
+We present a high level of the findings for previous week's threat modelling to gather feedback.
+
+General consensus is that there is a lot of interest in the "develop low, deploy high" pattern that we are going towards but can easily become a never-ending rabbithole of controls.
+
+## Prioritisation
+
+We present our next suggested priorities as such:
+
+1. Scenario 0 is "well architected": GuardDuty, SCPs, centralised logs, GH actions controls
+2. Trustable pipelines: From Threat Modelling - current pipelines are not tamper-resistant.
+3. Scenario 1: Build towards CLA's "Apply for a Creative License" service
+
+And agree that the sequence makes sense, but:
+- we should carefully timebox 1.: some controls are important but it can become an infinite rabbithole of not-so-interesting, well-documented controls.
+- as mentioned above, there is a lot of interest in 2. and where it will bring us. We agreed to put the structure for it in place following existing publications as a reference but not spend more on that, as we believe we will discover more as we progress
+- with the above 2 in place we accellerate towards building Scenario 1
+
+### Scenario 1 proposal
+
+We make initial suggestions for Scenario 1 backstory, processes, organisational aspects and technology ([read more](https://github.com/tintulip/tintulip/tree/main/scenarios/scenario-1#scenario-1---clas-apply-for-a-creative-license-service)).
+Feedback indicates consensus on the suggestions made and seems to lean towards the ECS option for the runtime platform, although more feedback will be collected via xGov Slack.
+
+Some technology highlights are:
+- focus on service technology choices that promote accessibility (e.g. SSR, Progressive Enhancement) as:
+  - it is a critical requirement for gov.uk services
+  - some architectural tradeoffs made for this have security implications (e.g. backend-frontend interactions)
+- strong preference towards RDS as opposed as self-managing DBs
+
+## GDPR and CLA's services
+
+We touch upon the GDPR puzzle and we conclude that it warrants a dedicated conversation. Main points:
+- do we add some affordance to act on SARs and Right to Erasure as part of Scenario 1? We believe this changes the attack surface and it worth considering.
+- Right to Erasure might not be relevant as it implies usage of Consent as the legal base for processing and it is not generally the case for Government services.
+- The actual data in CLA's service will be fake - do we need both a real and a fictional versions of privacy policies and data processing playbooks?
+
+## The data provenance puzzle
+
+As we are approaching the introduction of data, an interesting point for future consideration will be data provenance - as data is siphoned out from services via integration, reporting, APIs and more, how do we track origin and properties of a piece of data, so that later we can e.g. detect sprawl of sensitive information, perform audits efficiently and apply pseudonymisation/anonymisation where necessary?
