@@ -22,7 +22,9 @@ Currently Control Tower governs London and only London is controlled.
 Control tower implements preventative or detective controls through guardrails and is applied throughtout the entire organisational unit. When control tower is set up guardrails is automatically enabled and certain controls are mandatory or elective.
 
 ## GuardDuty
-When control tower is initally enabled, it does not activate guard duty.
+When AWS Control Tower is initally enabled, it does not activate GuardDuty by default for the management account nor any other account created. For GuardDuty to be enabled for all accounts, a single account must be selected to be the administrator account (typically the Audit account). Other AWS accounts can then be associated with this GuardDuty administrator account as member accounts. As all accounts created through Control Tower are part of an AWS Organization, the account selected becomes the organization's delegated adminstrator for GuardDuty.
+
+For enabling GuardDuty programatically, the repository [enabling-guardduty](https://github.com/tintulip/enable-guardduty) provides Infrastructure-as-code to do so. It is recommended to do so after running `AWS Control Tower` and before creating any other accounts as future accounts will then have GuardDuty enabled automatically.
 
 ## Current Organisation Units Structure
 Below is a diagram that represents the organisation units(ou) Control tower has set up as well as an additional ou we have made, workloads OU. It also includes what each `ou` can do which is represented by the pink stickies and the following accounts.
