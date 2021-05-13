@@ -25,3 +25,16 @@ GitHub scans repositories for known types of secrets (e.g. AWS Access/Secret Key
 ## Semmle
 
 [Semmle](https://semmle.com) is a code analysis platform to help find zero-day vulnerabilities and automate variant analysis. [LGTM](https://lgtm.com/) helps development teams to identify vulnerabilities early by enabling automatic code reviews. The service is free for open-source, but requires commercial products for private repositories.
+
+## Actions restrictions
+
+Which actions are allowed in pipelines can introduce risks in the supply chain.
+GH offers a few options out of the box to restrict which actions are allowed to run. The option we are after is "Allow select actions" that allows to restrict to:
+- actions defined in public repositories in the TinTulip organisation
+  - private repositories not supported at this time, roadmap item: https://github.com/github/roadmap/issues/74
+- actions published by GH
+- actions published by verified creators
+
+We make this choice under the assumption that GitHub applies some form of due diligence on actions published, and requires verified creators to demonstrate due diligence as well (although the recent incident from Codecov.io, which is a verified creator, introduces significant doubt on this).
+
+The "Allow select actions" option also allows to specify a safelist of actions, but with our subscription plan it only applies to public repositories.
