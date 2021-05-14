@@ -8,7 +8,7 @@ Blue Team started configuring the AWS account on previous Friday and in the 3 da
 
 We have set up the following:
 
-- [Slack workspace](https://documentation.slack.com)
+- [Slack workspace](https://tintulip.slack.com)
 - [GitHub organisation](https://github.com/tintulip)
 - [AWS Account](https://048191938814.signin.aws.amazon.com/console)
 

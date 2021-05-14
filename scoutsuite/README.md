@@ -10,11 +10,11 @@ On the host machine, run the following command to download the docker image and 
 
 Within the container, configure the AWS cli tool.
 
-`aws configure --profile documentation`
+`aws configure --profile tintulip`
 
 Run the scout tool and save the report.
 
-`scout aws --profile documentation-owners --no-browser --report-dir /root/scout-report`
+`scout aws --profile tintulip-owners --no-browser --report-dir /root/scout-report`
 
 On the host machine, copy the report within the docker container to the host machine.
 

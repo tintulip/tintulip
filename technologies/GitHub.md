@@ -4,11 +4,11 @@ These are security features that have been set throughout a GitHub organization 
 
 ## Enforcing MFA
 
-[two-factor authentication](https://github.com/organizations/documentation/settings/security) can be enabled by checking the checkbox under `organization security` section though anyone who does not have it already enabled will be removed.
+[two-factor authentication](https://github.com/organizations/tintulip/settings/security) can be enabled by checking the checkbox under `organization security` section though anyone who does not have it already enabled will be removed.
 
 ## Dependabot
 
-[dependabot](https://github.com/organizations/documentation/settings/security_analysis) can be enabled through the `security & analysis` section for new repositories by checking the checkbox. For existing repositories, clicking on the 'enable all' button will enable this feature. Private repositories within an organization need to explicitly grant Dependabot access.
+[dependabot](https://github.com/organizations/tintulip/settings/security_analysis) can be enabled through the `security & analysis` section for new repositories by checking the checkbox. For existing repositories, clicking on the 'enable all' button will enable this feature. Private repositories within an organization need to explicitly grant Dependabot access.
 
 ## Branch Protection
 
