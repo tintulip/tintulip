@@ -26,6 +26,12 @@ When AWS Control Tower is initally enabled, it does not activate GuardDuty by de
 
 For enabling GuardDuty programatically, the repository [enabling-guardduty](https://github.com/tintulip/enable-guardduty) provides Infrastructure-as-code to do so. It is recommended to do so after running `AWS Control Tower` and before creating any other accounts as future accounts will then have GuardDuty enabled automatically.
 
+## Service Control Policies (SCPs)
+
+Enabling `Service Control Policies` brings great benefits. The policies are similar to IAM policies, with a few extra restrictions. The policies are applied to `Organizational Units` and apply to AWS accounts that are included within the `Organizational Units`. When new accounts are created through Control Tower, the accounts are added to an Organization Unit and will have default restrictions placed upon them depending on the use case.
+
+SCPs can be managed using infrastructure-as-code to help keep track of what is applied and to make changes incrementally. The repository [enable-scps](https://github.com/tintulip/enable-scps) keeps track of SCPs applied.
+
 ## Current Organisation Units Structure
 Below is a diagram that represents the organisation units(ou) Control tower has set up as well as an additional ou we have made, workloads OU. It also includes what each `ou` can do which is represented by the pink stickies and the following accounts.
 
