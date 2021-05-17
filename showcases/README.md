@@ -18,7 +18,7 @@ With this the team is ready to go!
 
 The organisation is available at [https://github.com/tintulip](https://github.com/tintulip). Other than code, it hosts the [Blue Team's kanban board](https://github.com/tintulip/tintulip/projects/1) using GH Projects as well as the [knowledgebase](https://github.com/tintulip/tintulip) that we'll be accumulating as we play out Scenarios. For now you can find the [description of Scenario 0](https://github.com/tintulip/tintulip/tree/main/scenarios/scenario-0) and the outputs from the threat modelling session we ran on it, as well as documentation on how we [bootstrapped the AWS account](https://github.com/tintulip/tintulip/blob/main/technologies/bootstrap-owners.md) and [GitHub organisation](https://github.com/tintulip/tintulip/blob/main/GitHub.md).
 
-The other repository avaialble for now is [`bootstrap-users`](https://github.com/tintulip/bootstrap-users), containing the Terraform scripts we used for initial bootstrap of AWS administrators.
+The other repository available for now is [`bootstrap-users`](https://github.com/tintulip/bootstrap-users), containing the Terraform scripts we used for initial bootstrap of AWS administrators.
 
 ## AWS setup
 
