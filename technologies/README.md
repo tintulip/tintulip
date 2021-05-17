@@ -22,9 +22,12 @@ Currently Control Tower governs London and only London is controlled.
 Control tower implements preventative or detective controls through guardrails and is applied throughtout the entire organisational unit. When control tower is set up guardrails is automatically enabled and certain controls are mandatory or elective.
 
 ## GuardDuty
-When AWS Control Tower is initally enabled, it does not activate GuardDuty by default for the management account nor any other account created. For GuardDuty to be enabled for all accounts, a single account must be selected to be the administrator account (typically the Audit account). Other AWS accounts can then be associated with this GuardDuty administrator account as member accounts. As all accounts created through Control Tower are part of an AWS Organization, the account selected becomes the organization's delegated adminstrator for GuardDuty.
+When AWS Control Tower is initially enabled, it does not activate GuardDuty by default for the management account nor any other account created. For GuardDuty to be enabled for all accounts, a single account must be selected to be the administrator account (typically the Audit account). Other AWS accounts can then be associated with this GuardDuty administrator account as member accounts. As all accounts created through Control Tower are part of an AWS Organization, the account selected becomes the organization's delegated administrator for GuardDuty.
 
-For enabling GuardDuty programatically, the repository [enabling-guardduty](https://github.com/tintulip/enable-guardduty) provides Infrastructure-as-code to do so. It is recommended to do so after running `AWS Control Tower` and before creating any other accounts as future accounts will then have GuardDuty enabled automatically.
+For enabling GuardDuty programmatically, the repository [enabling-guardduty](https://github.com/tintulip/enable-guardduty) provides Infrastructure-as-code to do so. It is recommended to do so after running `AWS Control Tower` and before creating any other accounts as future accounts will then have GuardDuty enabled automatically.
+
+### Enable GuardDuty on multiple regions
+GuardDuty is currently enabled for just two regions (London & Ireland). It is best-practice to enable GuardDuty for all regions, but for multiple reasons including cost and clarity we have not enabled it on other regions for Tintulip at the moment. To protect ourselves, we restricted other enabled regions by blocking service usage but for London and Ireland. To enable GuardDuty in another region, the region should be added as a module on the following [repository](https://github.com/tintulip/enable-guardduty/blob/main/README.md#multiple-region-support).
 
 ## Service Control Policies (SCPs)
 
