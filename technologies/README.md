@@ -27,7 +27,7 @@ When AWS Control Tower is initially enabled, it does not activate GuardDuty by d
 For enabling GuardDuty programmatically, the repository [enabling-guardduty](https://github.com/tintulip/enable-guardduty) provides Infrastructure-as-code to do so. It is recommended to do so after running `AWS Control Tower` and before creating any other accounts as future accounts will then have GuardDuty enabled automatically.
 
 ### Enable GuardDuty on multiple regions
-GuardDuty is currently enabled for just two regions (London & Ireland). It is best-practice to enable GuardDuty for all regions, but for multiple reasons including cost and clarity we have not enabled it on other regions for Tintulip at the moment. To protect ourselves, we restricted other enabled regions by blocking service usage but for London and Ireland. To enable GuardDuty in another region, the region should be added as a module on the following [repository](https://github.com/tintulip/enable-guardduty/blob/main/README.md#multiple-region-support).
+GuardDuty is currently enabled for just two regions (London & Ireland). It is best-practice to enable GuardDuty for all regions. To protect ourselves, we restricted other enabled regions by blocking service usage but for London and Ireland. To enable GuardDuty in another region, the region should be added as a module on the following [repository](https://github.com/tintulip/enable-guardduty/blob/main/README.md#multiple-region-support).
 
 ## Service Control Policies (SCPs)
 
