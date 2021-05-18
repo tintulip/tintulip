@@ -15,7 +15,7 @@ In order for a landing zone to be configured, control tower runs pre-launch chec
 
 ## Region
 
-Currently Control Tower governs and controls London (eu-west-2) and Ireland (eu-west-1). London has been set up as the `home region` and cannot be changed without the assistance of AWS Support. To enable further regions, we can set up a further landing zone from within the AWS Control Tower management account. AWS Control Tower will automate the creation of new landing zones.
+Currently Control Tower governs and controls London (eu-west-2) and Ireland (eu-west-1). London has been set up as the `home region` and cannot be changed without the assistance of AWS Support. To enable further regions, we can update `landing zone settings` from within the AWS Control Tower management account and click on the `Update Regions` button within the Regions tab. AWS Control Tower will automate the creation of new landing zones. Some `Organization Units` may need to be re-registered to enroll the accounts within.
 
 ## Guardrails
 
