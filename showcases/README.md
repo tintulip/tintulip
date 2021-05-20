@@ -172,3 +172,31 @@ We touch upon the GDPR puzzle and we conclude that it warrants a dedicated conve
 ## The data provenance puzzle
 
 As we are approaching the introduction of data, an interesting point for future consideration will be data provenance - as data is siphoned out from services via integration, reporting, APIs and more, how do we track origin and properties of a piece of data, so that later we can e.g. detect sprawl of sensitive information, perform audits efficiently and apply pseudonymisation/anonymisation where necessary?
+
+# Showcase 4 - 19/05/2021
+
+You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20May%2019.pdf).
+
+Since last showcase we covered the "improve security controls" timebox (minus a story in flight). CLA's website is available [at this link](https://d2euivgmcq1yyp.cloudfront.net/).
+
+Individual items we worked on:
+- GuardDuty ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/README.md#GuardDuty))
+- Service Control Policies ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/README.md))
+- Extending Control Tower ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/README.md#Region))
+- Restricting GitHub Actions ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/GitHub.md#Actions%20restrictions))
+
+Everything developed so far is either covered with Terraform code or documented as a manual step.
+
+## Prioritisation
+
+We confirm the order of next priority in line with previous week.
+
+1. Trustable pipelines:
+  From Threat Modelling - current pipelines are not tamper-resistant.
+  Build CD pipeline in AWS (high side) to enforce security controls.
+  Limited to groundwork to make it work.
+2. Scenario 1:
+  Build towards CLA's "Apply for a Creative License" service.
+  - Will capture user details to apply for a license
+  - Java service using SSR, Docker container in ECS, RDS database
+  - GDPR considerations out of scope - option for future scenario
