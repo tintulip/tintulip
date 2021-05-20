@@ -180,10 +180,10 @@ You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/
 Since last showcase we covered the "improve security controls" timebox (minus a story in flight). CLA's website is available [at this link](https://d2euivgmcq1yyp.cloudfront.net/).
 
 Individual items we worked on:
-- GuardDuty ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/README.md#GuardDuty))
-- Service Control Policies ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/README.md))
-- Extending Control Tower ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/README.md#Region))
-- Restricting GitHub Actions ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/GitHub.md#Actions%20restrictions))
+- GuardDuty ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/README.md#guardduty))
+- Service Control Policies ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/README.md#service-control-policies-scps))
+- Extending Control Tower ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/README.md#region))
+- Restricting GitHub Actions ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/GitHub.md#actions-restrictions))
 
 Everything developed so far is either covered with Terraform code or documented as a manual step.
 
