@@ -38,7 +38,8 @@ SCPs can be managed using infrastructure-as-code to help keep track of what is a
 ## Current Organisation Units Structure
 Below is a diagram that represents the organisation units(ou) Control tower has set up as well as an additional ou we have made, workloads OU. It also includes what each `ou` can do which is represented by the pink stickies and the following accounts.
 
-![Current Organisation units structure](./ORG_Structure.png "Current Organisation units structure")
+![Current Organisation units structure for scenario 0](./ORG_Structure.png "Current Organisation units structure for scenario 0")
+
 
 ## Out of the box SSO permissions
 
