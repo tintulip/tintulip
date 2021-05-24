@@ -38,3 +38,10 @@ GH offers a few options out of the box to restrict which actions are allowed to 
 We make this choice under the assumption that GitHub applies some form of due diligence on actions published, and requires verified creators to demonstrate due diligence as well (although the recent incident from Codecov.io, which is a verified creator, introduces significant doubt on this).
 
 The "Allow select actions" option also allows to specify a safelist of actions, but with our subscription plan it only applies to public repositories.
+
+## Creating a new repository
+
+These are the steps followed to create a new repository:
+
+- Branch protection rule `Require signed commits` and `Include administrators` on `main` branch.
+- Allow write access and alerts to the team
