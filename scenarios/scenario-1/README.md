@@ -58,7 +58,7 @@ Java webapp service its own frontend, running as a Kubernetes service in EKS Far
 
 Workshop run on 25/05/2021 on [this mural board (prior access required)](https://app.mural.co/t/thoughtworksclientprojects1205/m/thoughtworksclientprojects1205/1621936615268/5477c54ae1a38dc019e398db14d5416f6f746ef0)
 
-![Trusted Pipeline threat modelling](https://github.com/tintulip/tintulip/raw/main/scenarios/scenario-1/CLA-scenario-1-trust-pipeline-0.png "threat model of trusted pipeline")
+![Trusted Pipeline threat modelling](https://github.com/tintulip/tintulip/raw/main/scenarios/scenario-1/CLA-scenario-1-updated-trust-pipeline-0.png "threat model of trusted pipeline")
 
 ### Threats identified
 
