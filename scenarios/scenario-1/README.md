@@ -53,3 +53,23 @@ Java webapp service its own frontend, running as a Kubernetes service in EKS Far
 
 - main boundary between Platform and Application would move to the Kubernetes API instead of the AWS API, potentially worth exploring
 - high build cost, the Kubernetes ecosystem adds a lot of complexity
+
+## Threat model on trusted pipeline for scenario 1, 25/05/2021
+
+Workshop run on 25/05/2021 on [this mural board (prior access required)](https://app.mural.co/t/thoughtworksclientprojects1205/m/thoughtworksclientprojects1205/1621936615268/5477c54ae1a38dc019e398db14d5416f6f746ef0)
+
+![Trusted Pipeline threat modelling](https://github.com/tintulip/tintulip/raw/main/scenarios/scenario-1/CLA-scenario-1-trust-pipeline-0.png "threat model of trusted pipeline")
+
+### Threats identified
+
+- Can find vulnerabilities just by looking at the terraform.
+- Request can trigger a vulnerability in the workload request endpoint if there is not enough validation.
+- Request deploy previous tf configuration.
+- Requesting a build can be sppofed but that would need AWS(MFA) and github creds.
+- Triggering a lot of requests can overwhelm the builder from picking up real requests.
+- Trigger a lot of approval can spam people and hav approval in email blocklist.
+- Approving own changes if spoofed AWS (MFA) and Github.
+- Approval of dangerous changes.
+- Can use to expose secrets from tf state.
+- Attempt to delete buckets can be rejected.
+- Can find vulnerabilities just by looking at the AWS setup in the environment.
