@@ -200,3 +200,35 @@ We confirm the order of next priority in line with previous week.
   - Will capture user details to apply for a license
   - Java service using SSR, Docker container in ECS, RDS database
   - GDPR considerations out of scope - option for future scenario
+
+# Showcase 5 - 26/05/2021
+
+You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20May%2026.pdf).
+
+Since the last showcase we covered various security controls applied to the AWS accounts. We also started on the groundwork for the trusted pipeline including the architecture and setting up the required accounts for it.
+
+Individual items we worked on:
+- GuardDuty in all regions ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/CONTROL_TOWER.md#enable-guardduty-on-multiple-regions))
+- Cross account log replication ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/LOG_REPLICATION.md))
+- Groundwork for trusted pipeline ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/ACCOUNTS.md))
+
+Everything developed so far is either covered with Terraform code or documented as a manual step.
+
+## Threat Modelling
+
+We present a high level of the findings for previous week's threat modelling to gather feedback.
+
+We took a [closer look at the "develop low, deploy high" pattern that we are going towards and especially focusing on the "deployment" account](https://github.com/tintulip/tintulip/tree/main/scenarios/scenario-1#threat-model-on-trusted-pipeline-for-scenario-1-25052021).
+
+## Prioritisation
+
+We confirm the order of next priority in line with previous week.
+
+1. Trustable pipelines:
+  Continue moving the tradeoff slider towards building our own delivery
+  and laying the foundation for trusted pipelines.
+  Question about security checks in the trusted pipeline: can it be done whilst still maintaining multiple deployments per day and what would be the impact on productivity?
+2. Scenario 1:
+  Build towards CLA's "Apply for a Creative License" service.
+
+General consensus was that the red team would start attacking a well built senario 1 within a few weeks.
