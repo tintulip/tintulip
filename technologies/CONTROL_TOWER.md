@@ -40,7 +40,7 @@ Below is a diagram that represents the organisation units(ou) Control tower has 
 
 ![Current Organisation units structure for scenario 0](./ORG_Structure.png "Current Organisation units structure for scenario 0")
 
-The organisation unit diagram has been adapted to represent the strcture required for scenario 1. 
+The organisation unit diagram has been adapted to represent the structure required for scenario 1.
 
 ![Current Organisation units structure for scenario 1](./ORG_Structure_Scenario1.png "Current Organisation units structure for scenario 1")
 
