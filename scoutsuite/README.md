@@ -49,8 +49,8 @@ source venv/bin/activate
 pip install scoutsuite
 ```
 
-Run scoutsuite using pip
+Run scoutsuite in eu-west-2/eu-west-1 regions
 
 ```
-scout aws -p tintulip-<account_name>-security --no-browser
+scout aws -p tintulip-<account_name>-security --no-browser -r eu-west-2 eu-west-1
 ```
