@@ -50,5 +50,5 @@ pip install scoutsuite
 Run scoutsuite using pip
 
 ```
-scout aws -p tintulip-preprod-security --no-browser
+scout aws -p tintulip-<account_name>-security --no-browser
 ```
