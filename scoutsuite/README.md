@@ -22,6 +22,8 @@ On the host machine, copy the report within the docker container to the host mac
 
 ## Using ScoutSuite with AWS SSO
 
+Make sure you are added to the `SecurityAuditors` group within SSO as this group has the `SecurityAudit` permission set which contains the `SecurityAudit` and `ReadOnlyAccess` AWS managed policies and has access to every account.
+
 Set up the security profile from within `~/.aws/config` replacing the account_name and account_id.
 
 ```bash
