@@ -19,3 +19,36 @@ Run the scout tool and save the report.
 On the host machine, copy the report within the docker container to the host machine.
 
 `docker cp $(docker ps -f ancestor=rossja/ncc-scoutsuite --format "{{.ID}}"):/root/scout-report ./`
+
+## Using ScoutSuite with AWS SSO
+
+Set up the security profile from within `~/.aws/config` replacing the account_name and account_id.
+
+```bash
+[profile tintulip-<account_name>-security]
+sso_start_url = https://tintulip.awsapps.com/start/
+sso_region = eu-west-2
+sso_account_id = <account_id>
+sso_role_name = SecurityAudit
+region = eu-west-2
+output = json
+```
+
+Authenticate with SSO
+
+```
+aws sso login --profile tintulip-<account_name>-security
+```
+
+Install scout using [pip](https://github.com/nccgroup/ScoutSuite/wiki/Setup#via-pip)
+```
+virtualenv -p python3 venv
+source venv/bin/activate
+pip install scoutsuite
+```
+
+Run scoutsuite using pip
+
+```
+scout aws -p tintulip-preprod-security --no-browser
+```
