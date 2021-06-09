@@ -248,7 +248,7 @@ Individual items we worked on:
 
 We confirm that the top priority is to get a basic dynamic workload for Scenario 1 ready.
 
-# Showcase 7 - 02/06/2021
+# Showcase 8 - 09/06/2021
 
 You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20June%209.pdf).
 
