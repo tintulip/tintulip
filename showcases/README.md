@@ -1,4 +1,4 @@
-# Showcase 0 - 21/04/2021
+# Showcase 1 - 21/04/2021
 
 First showcase!
 
@@ -89,7 +89,7 @@ We are up for revisiting this and dedicate some efforts in this area as we chang
 
 A significant chunk of risk identified in threat modelling comes from the high-privilege pipeline that we initially accounted for. In reality we expect that running Control Tower will give us a set up in which we'll rely less on Terraform and highly privileged tooling executing outside the AWS environment and rely on AWS-native tooling instead, integrating Infrastructure as Code only within security boundaries and not around them.
 
-# Showcase 1 - 28/04/2021
+# Showcase 2 - 28/04/2021
 
 You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20April%2028.pdf).
 
@@ -106,7 +106,7 @@ We present an [updated Threat Model for scenario 0](https://github.com/tintulip/
 
 Main point of the discussion is that we want to focus on how to improve attack resistance of the longer temporal attack surface rather on low-frequency or one-off operations.
 
-# Showcase 2 - 05/05/2021
+# Showcase 3 - 05/05/2021
 
 Showcase canceled due to shorter week and work being in flight rather than completed.
 A replacement deck with updates is available [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20May%205.pdf).
@@ -118,7 +118,7 @@ We update progress on:
 
 We present a [different approach to pipelines running privileged AWS operations](https://github.com/tintulip/tintulip/tree/main/scenarios/scenario-0#threat-model-on-pipeline-design-with-privileged-workloads-in-aws-04052021).
 
-# Showcase 3 - 12/05/2021
+# Showcase 4 - 12/05/2021
 
 You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20May%2012.pdf).
 
@@ -173,7 +173,7 @@ We touch upon the GDPR puzzle and we conclude that it warrants a dedicated conve
 
 As we are approaching the introduction of data, an interesting point for future consideration will be data provenance - as data is siphoned out from services via integration, reporting, APIs and more, how do we track origin and properties of a piece of data, so that later we can e.g. detect sprawl of sensitive information, perform audits efficiently and apply pseudonymisation/anonymisation where necessary?
 
-# Showcase 4 - 19/05/2021
+# Showcase 5 - 19/05/2021
 
 You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20May%2019.pdf).
 
@@ -201,7 +201,7 @@ We confirm the order of next priority in line with previous week.
   - Java service using SSR, Docker container in ECS, RDS database
   - GDPR considerations out of scope - option for future scenario
 
-# Showcase 5 - 26/05/2021
+# Showcase 6 - 26/05/2021
 
 You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20May%2026.pdf).
 
@@ -232,3 +232,39 @@ We confirm the order of next priority in line with previous week.
   Build towards CLA's "Apply for a Creative License" service.
 
 General consensus was that the red team would start attacking a well built senario 1 within a few weeks.
+
+# Showcase 7 - 02/06/2021
+
+You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20June%202.pdf).
+
+The blue team is now preparing for red team's start by adding a dynamic workload to the environment and finishing the trusted pipelines.
+
+Individual items we worked on:
+- Running Terratest in the Sandbox ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/terraform.md#terratest))
+- Setting up CodePipeline ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/TRUSTED_PIPELINE.md))
+- Network setup
+
+## Prioritisation
+
+We confirm that the top priority is to get a basic dynamic workload for Scenario 1 ready.
+
+# Showcase 7 - 02/06/2021
+
+You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20June%209.pdf).
+
+Blue team deployed a basic service for Scenario 1 and will follow up adding a database to it. The main focus is on logistics to enable Red team
+to start such as accounts and permissions.
+
+Red team started testing against AWS best practices and presents some initial findings!
+
+Individual items we worked on:
+- Configure IaC pipeline
+- Configure webapp pipeline
+- Build & Deploy skeleton webapp (view it [here](https://www.tintulip-scenario1.net/greeting))
+- Setup public-facing webapp networking
+- Initial kickoff with Red Team
+- First Red Team findings!
+
+## Prioritisation
+
+We will finish adding a database to Scenario 1 and remediate findings from various automated tools we adopted, as well as the finding reported by the Red team.
