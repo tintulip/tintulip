@@ -3,7 +3,7 @@
 We used the weekly threat modelling slot on June 22 to brainstorm and prioritise scenarios rather than individual threats, and reserved half the time to discuss what is worth exploring and feasibility for the next 5 weeks.
 This is the board at the end of session:
 
-![Scenario definition session](https://github.com/tintulip/tintulip/raw/main/scenarios/scenarios/scenarios-definition-22-June-2021.png "scenario definition beyond 1")
+![Scenario definition session](https://github.com/tintulip/tintulip/raw/main/scenarios/scenarios-definition-22-June-2021.png "scenario definition beyond 1")
 
 The top 6 scenarios that emerged are, in order from most voted:
 - Assume some bad terraform gets through the pipeline and deployed. What is the blast radius?
