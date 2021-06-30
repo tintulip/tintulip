@@ -20,3 +20,6 @@ With ECS, the services that are interacted with include [ECR (dkr and api)](http
 
 Each of the above are [interface endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpce-interface.html) which is an elastic network interface with a private IP address from within the private subnet range provided. It servces as the entry point for traffic destined to its corresponding AWS service. Security groups can also be attached to the VPC endpoints and each of these VPC endpoints has an `ingress` rule that allows traffic from port `443` in that originated from the service security group.
 
+ECS Fargate also interacts with S3 and therefore requires a [gateway VPC endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/vpce-gateway.html). For Fargate to pull a container. it needs a channel open to S3 in order to pull the image. A gateway VPC endpoint has a route table associated with it. The route table should be the one that is associated with the private subnets. Finally the service's security group needs to allow `https` traffic outbound to the S3 endpoint. This can be done by using the S3 prefix list that is outputted when creating the VPC endpoint.
+
+This [blog post](https://7thzero.com/blog/limiting-outbound-egress-traffic-while-using-aws-fargate-and-ecr) has a good summary of the learnings from setting up an internal-only task on Fargate.
