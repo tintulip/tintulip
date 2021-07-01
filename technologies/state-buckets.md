@@ -13,4 +13,4 @@ The current kms state bucket structure is represented in the diagram below.
 
 ## Encrypting State Buckets
 
-Amazon S3 uses an individual AWS KMS key for each [bucket](), therefore if all the state files were stored in one `S3 bucket` , it would be encrypted by one kms key. Therefore, if a malicious user gained access to the `kms key` they would be able to decrypt the state files and see all the secrets. Whereas,having the state files in a seperate state buckets reduces the blast radius and prevents all state files from being decrypted.  
+Amazon S3 uses an individual AWS KMS key for each [bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html), therefore if all the state files were stored in one `S3 bucket` , it would be encrypted by one kms key. Therefore, if a malicious user gained access to the `kms key` they would be able to decrypt the state files and see all the secrets. Whereas,having the state files in a seperate state buckets reduces the blast radius and prevents all state files from being decrypted.
