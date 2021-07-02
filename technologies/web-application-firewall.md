@@ -20,7 +20,7 @@ A WAF operates through a set of rules which aim to protect against vulnerabiliti
 
 ## Examples in Use
 
-To test that these rules were working, several requests can be sent to test it out.
+To test that these [rules](https://github.com/tintulip/workloads/blob/main/environments/preproduction/waf.tf) were working, several requests can be sent to test it out. The WAF was [associated with a loadbalancer](https://github.com/tintulip/workloads/blob/main/environments/preproduction/waf-lb.tf) under a separate subdomain. The requests were also [logged into a separate bucket](https://github.com/tintulip/workloads/blob/main/environments/preproduction/waf-logging.tf).
 
 A "good" request allowed
 ```bash
