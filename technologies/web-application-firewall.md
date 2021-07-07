@@ -16,7 +16,7 @@ Some of the managed rules chosen are:
 
 ## How it works
 
-A WAF operates through a set of rules which aim to protect against vulnerabilities in the appliction by filtering out malicious traffic. The value comes from the speed and ease at which a WAF and its policies can be applied to a loadbalancer, API gateway or other AWS services and from the fact that (managed) rules can be updated to protect against emerging threats.
+A WAF operates through a set of rules which aim to protect against vulnerabilities in the application by filtering out malicious traffic. The value comes from the speed and ease at which a WAF and its policies can be applied to a loadbalancer, API gateway or other AWS services and from the fact that (managed) rules can be updated to protect against emerging threats.
 
 ## Examples in Use
 
