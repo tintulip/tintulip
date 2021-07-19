@@ -125,9 +125,9 @@ You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/
 Since last showcase we present completion of scenario 0. CLA's website is now available [at this link](https://d2euivgmcq1yyp.cloudfront.net/).
 
 Individual items we worked on:
-- Pipeline for website infrastructure ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/PIPELINE.md))
-- Pipeline for website content delivery ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/RESTRICTED_PIPELINE.md))
-- Security tooling for IaC pipelines ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/PIPELINE.md))
+- Pipeline for website infrastructure ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/pipeline.md))
+- Pipeline for website content delivery ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/restricted-pipeline.md))
+- Security tooling for IaC pipelines ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/pipeline.md))
 - Publishing CLA's website ([read more](https://github.com/tintulip/website-infra#cloudfront-considerations))
 
 Everything developed so far is either covered with Terraform code or documented as a manual step.
@@ -180,9 +180,9 @@ You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/
 Since last showcase we covered the "improve security controls" timebox (minus a story in flight). CLA's website is available [at this link](https://d2euivgmcq1yyp.cloudfront.net/).
 
 Individual items we worked on:
-- GuardDuty ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/CONTROL_TOWER.md#guardduty))
-- Service Control Policies ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/CONTROL_TOWER.md#service-control-policies-scps))
-- Extending Control Tower ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/CONTROL_TOWER.md#region))
+- GuardDuty ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/control-tower.md#guardduty))
+- Service Control Policies ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/control-tower.md#service-control-policies-scps))
+- Extending Control Tower ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/control-tower.md#region))
 - Restricting GitHub Actions ([read more](https://github.com/tintulip/tintulip/tree/main/technologies/GitHub.md#actions-restrictions))
 
 Everything developed so far is either covered with Terraform code or documented as a manual step.
@@ -208,9 +208,9 @@ You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/
 Since the last showcase we covered various security controls applied to the AWS accounts. We also started on the groundwork for the trusted pipeline including the architecture and setting up the required accounts for it.
 
 Individual items we worked on:
-- GuardDuty in all regions ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/CONTROL_TOWER.md#enable-guardduty-on-multiple-regions))
-- Cross account log replication ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/LOG_REPLICATION.md))
-- Groundwork for trusted pipeline ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/ACCOUNTS.md))
+- GuardDuty in all regions ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/control-tower.md#enable-guardduty-on-multiple-regions))
+- Cross account log replication ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/log-replication.md))
+- Groundwork for trusted pipeline ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/accounts.md))
 
 Everything developed so far is either covered with Terraform code or documented as a manual step.
 
@@ -241,7 +241,7 @@ The blue team is now preparing for red team's start by adding a dynamic workload
 
 Individual items we worked on:
 - Running Terratest in the Sandbox ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/terraform.md#terratest))
-- Setting up CodePipeline ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/TRUSTED_PIPELINE.md))
+- Setting up CodePipeline ([read more](https://github.com/tintulip/tintulip/blob/main/technologies/trusted-pipeline.md))
 - Network setup
 
 ## Prioritisation
