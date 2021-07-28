@@ -24,16 +24,16 @@ Control tower implements preventative or detective controls through guardrails a
 ## GuardDuty
 When AWS Control Tower is initially enabled, it does not activate GuardDuty by default for the management account nor any other account created. For GuardDuty to be enabled for all accounts, a single account must be selected to be the administrator account (typically the Audit account). Other AWS accounts can then be associated with this GuardDuty administrator account as member accounts. As all accounts created through Control Tower are part of an AWS Organization, the account selected becomes the organization's delegated administrator for GuardDuty.
 
-For enabling GuardDuty programmatically, the repository [enabling-guardduty](https://github.com/tintulip/enable-guardduty) provides Infrastructure-as-code to do so. It is recommended to do so after running `AWS Control Tower` and before creating any other accounts as future accounts will then have GuardDuty enabled automatically.
+For enabling GuardDuty programmatically, the repository [guardduty](https://github.com/tintulip/cla-organisation/tree/main/guardduty) provides Infrastructure-as-code to do so. It is recommended to do so after running `AWS Control Tower` and before creating any other accounts as future accounts will then have GuardDuty enabled automatically.
 
 ### Enable GuardDuty on multiple regions
-GuardDuty is currently enabled for just two regions (London & Ireland). It is best-practice to enable GuardDuty for all regions. To protect ourselves, we restricted other enabled regions by blocking service usage but for London and Ireland. To enable GuardDuty in another region, the region should be added as a module on the following [repository](https://github.com/tintulip/enable-guardduty/blob/main/README.md#multiple-region-support).
+GuardDuty is currently enabled for just two regions (London & Ireland). It is best-practice to enable GuardDuty for all regions. To protect ourselves, we restricted other enabled regions by blocking service usage but for London and Ireland. To enable GuardDuty in another region, the region should be added as a module on the following [repository](https://github.com/tintulip/cla-organisation/tree/main/guardduty#multiple-region-support).
 
 ## Service Control Policies (SCPs)
 
 Enabling `Service Control Policies` brings great benefits. The policies are similar to IAM policies, with a few extra restrictions. The policies are applied to `Organizational Units` and apply to AWS accounts that are included within the `Organizational Units`. When new accounts are created through Control Tower, the accounts are added to an Organization Unit and will have default restrictions placed upon them depending on the use case.
 
-SCPs can be managed using infrastructure-as-code to help keep track of what is applied and to make changes incrementally. The repository [service-control-policies](https://github.com/tintulip/service-control-policies) keeps track of SCPs applied.
+SCPs can be managed using infrastructure-as-code to help keep track of what is applied and to make changes incrementally. The repository [service-control-policies](https://github.com/tintulip/cla-organisation/tree/main/service-control-policies) keeps track of SCPs applied.
 
 ## Current Organisation Units Structure
 Below is a diagram that represents the organisation units(ou) Control tower has set up as well as an additional ou we have made, workloads OU. It also includes what each `ou` can do which is represented by the pink stickies and the following accounts.
