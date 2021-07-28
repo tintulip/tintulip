@@ -14,6 +14,8 @@ These are security features that have been set throughout a GitHub organization 
 
 Branch protection is done on a repository-by-repository basis. For each repository, it requires creating a branch protection rule (found within the `branches` section under settings). The protection rules currently select `require signed commits` and `include administrators`. To prevent force pushes, the `allow force pushes` checkbox is unselected.
 
+Branch protection is automatically set for all repository when the [github stack](https://github.com/tintulip/cla-organisation/tree/main/github) is ran. It will query all repositories and update branch protection for the `main` branch.
+
 ## Audit Log
 
 The [audit log](https://docs.github.com/en/organizations/keeping-your-organization-secure/reviewing-the-audit-log-for-your-organization) within GitHub allows admins to review the actions performed by members of an organization.
