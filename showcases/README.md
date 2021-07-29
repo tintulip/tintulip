@@ -268,3 +268,6 @@ Individual items we worked on:
 ## Prioritisation
 
 We will finish adding a database to Scenario 1 and remediate findings from various automated tools we adopted, as well as the finding reported by the Red team.
+
+# Showcase 9 - 23/06/2021
+
