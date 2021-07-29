@@ -271,3 +271,26 @@ We will finish adding a database to Scenario 1 and remediate findings from vario
 
 # Showcase 9 - 23/06/2021
 
+You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20June%2023.pdf).
+
+The CLA's environment has been undergoing testing for Scenario 1. As well as, planning the scenarios for the next 5 weeks for the Red and Blue team. 
+
+Individual items we worked on:
+- Restricting Workload Egress
+- Team Mozart(Web) can now access AWS
+- Add RDS to the Workload
+- Apply for a creative license(view it [here](https://www.tintulip-scenario1.net/addUser))
+- Policy as code checks for Terraform
+
+## Prioritisation
+
+We confirm that the order of priority of testing for the Red team for the next 5 weeks are :
+
+1. Scenario 2: Assume some bad code gets through the pipeline and into the web-application. What is the blast radius?
+
+2. Scenario 3: Assume some bad terraform gets through the pipeline and deployed. What is the blast radius?
+
+3. Scenario 4: What if Rob from Red team was an evil developer on the Platform team? Add control to infra pipeline
+
+# Showcase 10 - 30/06/2021
+
