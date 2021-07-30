@@ -273,7 +273,7 @@ We will finish adding a database to Scenario 1 and remediate findings from vario
 
 You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20June%2023.pdf).
 
-The CLA's environment has been undergoing testing for Scenario 1. As well as, planning the scenarios for the next 5 weeks for the Red and Blue team. 
+The CLA's environment has been undergoing testing for Scenario 1. As well as, planning the scenarios for the next 5 weeks for the Red team. 
 
 Individual items we worked on:
 - Restricting Workload Egress
@@ -294,3 +294,75 @@ We confirm that the order of priority of testing for the Red team for the next 5
 
 # Showcase 10 - 30/06/2021
 
+You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20June%2030.pdf).
+
+The Red team is testing Scenario 2 and produced findings. The Blue team is looking at improving strength of controls for Scenario 3.
+
+Individual items Blue team worked on:
+- Restricting Workload Egress(With VPC endpoints)
+- Use KMS for statebuckets
+
+Individual items Red team worked on:
+- Data Exfiltration
+- Remote Access
+
+
+## Prioritisation
+
+We confirm that the order of testing for the Red team is in line with the previous week. The order of priority for the Blue team is as follows:
+
+1. Add SCPs to prevent AWS-based database exfils (e.g backups to external accounts).
+2.  Introduce anomaly detection in preproduction application testing.
+3. Limit egress from builder to a SaaS artifact repository.
+
+# Showcase 11 - 07/07/2021
+
+You can find the deck presented [here](Add link).
+
+The blue team is improving security controls in the Builder account and the Red team is continuing with testing scenario 2 and 3. 
+
+Individual items we worked on:
+- Preventing Data Exfil with [read more](https://github.com/tintulip/cla-organisation/tree/main/service-control-policies#deny-rds-backup-to-go-to-external-accounts)
+- Web Application Firewall [read more](https://github.com/tintulip/cla-organisation/tree/main/service-control-policies#deny-rds-backup-to-go-to-external-accounts)
+
+## Prioritisation
+
+We confirm that the order of testing for the Red team is in line with the previous week. The order of priority for the Blue team is as follows:
+
+1. Limit egress from builder to a SaaS artifact repository.
+2. Introduct technical controls around two pairs of eyes.
+3. Introduce anomaly detection in preproduction application testing.
+
+# Showcase 12 - 21/07/2021
+
+You can find the deck presented [here](Add link).
+
+Scenario 2 and 3 have been undergoing more testing by the Red team and the Blue team has been improving security controls in the Builder account. 
+
+Individual items we worked on:
+- Network Restrictions for Builder Account [read more](https://github.com/tintulip/tintulip/blob/main/technologies/network-firewall.md#network-firewall)
+- Read-only access for web team
+- Checking for malicious code
+
+## Prioritisation
+
+We confirm the order of priority for the Blue team is:
+
+1. Complete Artifactory PoC.
+2. Introduce a control for supply chain attacks.
+3. Clean up code and documentation deliverables.
+
+# Showcase 12 - 28/07/2021
+
+You can find the deck presented [here](Add link).
+
+Since last showcase Red team has finished testing Scenario 2 and 3 and has now begun testing Scenario 4. The Blue team has also finished improving controls and is now writing the final report and reviewing existing artifacts.
+
+Individual items we worked on:
+- Use Artifactory to pull images and packages
+- Ensure all repos have branch protection
+- Add pipeline checks for vulnerable dependancies
+
+## Prioritisation
+
+As it's the last showcase the Blue team priority will be working on producing a final writeup. 
