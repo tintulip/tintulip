@@ -317,7 +317,7 @@ We confirm that the order of testing for the Red team is in line with the previo
 
 # Showcase 11 - 07/07/2021
 
-You can find the deck presented [here](Add link).
+You can find the deck presented [here](https://github.com/tintulip/tintulip/raw/main/showcases/Tin%20Tulip%20Showcase%20-%20July%207.pdf).
 
 The blue team is improving security controls in the Builder account and the Red team is continuing with testing scenario 2 and 3. 
 
@@ -335,7 +335,7 @@ We confirm that the order of testing for the Red team is in line with the previo
 
 # Showcase 12 - 21/07/2021
 
-You can find the deck presented [here](Add link).
+You can find the deck presented [here](https://github.com/tintulip/tintulip/blob/raw/showcases/Tin%20Tulip%20Showcase%20-%20July%2021.pdf).
 
 Scenario 2 and 3 have been undergoing more testing by the Red team and the Blue team has been improving security controls in the Builder account. 
 
@@ -354,7 +354,7 @@ We confirm the order of priority for the Blue team is:
 
 # Showcase 12 - 28/07/2021
 
-You can find the deck presented [here](Add link).
+You can find the deck presented [here](https://github.com/tintulip/tintulip/blob/raw/showcases/Tin%20Tulip%20Showcase%20-%20July%2028.pdf).
 
 Since last showcase Red team has finished testing Scenario 2 and 3 and has now begun testing Scenario 4. The Blue team has also finished improving controls and is now writing the final report and reviewing existing artifacts.
 
